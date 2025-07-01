@@ -1,0 +1,27 @@
+name: Enviar mensagem Telegram às 22h
+
+on:
+  # schedule:
+  #   - cron: '0 1 * * *'  # 22h BRT (UTC-3 = 01h UTC)
+  workflow_dispatch:
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Executar o bot
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+        run: python bot.py
