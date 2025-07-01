@@ -1,8 +1,10 @@
 name: Enviar mensagem Telegram
 
 on:
+  workflow_dispatch:
   schedule:
-    - cron: '30 17 * * *'  
+    - cron: '*/5 * * * *'  
+
 jobs:
   send:
     runs-on: ubuntu-latest
