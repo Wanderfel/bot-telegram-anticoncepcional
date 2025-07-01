@@ -2,7 +2,7 @@ name: Enviar mensagem Telegram às 22h
 
 on:
   schedule:
-    - cron: '0 1 * * *'  # 22h BRT (UTC-3 = 01h UTC)
+    - cron: '16 16 * * *'  # 13:16 BRT (UTC-3)
   workflow_dispatch:
 
 jobs:
