@@ -1,13 +1,14 @@
-name: Enviar mensagem Telegram às 22h
+name: Enviar mensagem Telegram às 13:42
 
 on:
   workflow_dispatch:
   schedule:
-  - cron: '42 16 * * *'  # Executa todos os dias às 13:35 BRT
+    - cron: '46 16 * * *'  # 13:42 BRT (UTC-3)
 
 jobs:
   send:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout do repositório
         uses: actions/checkout@v3
