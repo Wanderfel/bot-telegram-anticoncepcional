@@ -15,6 +15,9 @@ BOT_TOKEN = os.getenv("BOT_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")
 MENSAGEM = 'Anti-concepcional ! :D'
 
+print(BOT_TOKEN)
+print(CHAT_ID)
+
 
 sendMessage(MENSAGEM, CHAT_ID, BOT_TOKEN)
   
