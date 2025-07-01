@@ -5,19 +5,15 @@ def sendMessage(message,chatID, token):
 
     try:
         response = requests.post(urlSendMessage, json={'chat_id': chatID, 'text': message})
-        print("resposta", response.text)
+        print(response.text)
         
     except Exception as e:
-        print("deu ruim", e)
+        print(e)
 
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")
 MENSAGEM = 'Anti-concepcional ! :D'
-
-print(BOT_TOKEN)
-print(CHAT_ID)
-
 
 sendMessage(MENSAGEM, CHAT_ID, BOT_TOKEN)
   
