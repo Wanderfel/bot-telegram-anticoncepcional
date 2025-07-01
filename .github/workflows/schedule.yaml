@@ -1,9 +1,9 @@
-name: Enviar mensagem Telegram às 13:42
+name: Enviar mensagem Telegram
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '46 16 * * *'  # 13:42 BRT (UTC-3)
+    - cron: '55 16 * * *'  
 
 jobs:
   send:
